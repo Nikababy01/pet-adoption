@@ -1,0 +1,19 @@
+body{
+    background-color: bisque;
+}
+
+#pets {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1000px;
+}
+
+.petscards{
+border: 2px solid blue;
+width: 25%;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
