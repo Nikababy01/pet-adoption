@@ -1,41 +1,41 @@
 const pets = [
     {
-      imageUrl: "https://s.abcnews.com/images/Lifestyle/AL_scared_cat_jt_151225_16x9_992.jpg",
       name: "Mable",
+      imageUrl: "https://images.saatchiart.com/saatchi/966847/art/3950341/3020199-PDVYDDUU-7.jpg",
       color: "Green",
-      specialSkill: "Gives sincere apologies.",
-      type: "cat"
+      specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
+      type: "Cat"
       
     },
     {
-      imageUrl: "https://hackernoon.com/hn-images/1*mONNI1lG9VuiqovpnYqicA.jpeg",  
       name: "Curly",
+      imageUrl: "https://hackernoon.com/hn-images/1*mONNI1lG9VuiqovpnYqicA.jpeg",  
       color: "Poop-Colored",
       specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
-      type: "cat"
+      type: "Cat"
       
     },
     {
       imageUrl:"https://s.abcnews.com/images/Lifestyle/AL_scared_cat_jt_151225_16x9_992.jpg",
       name:"Sadie",
       color: "Green",
-      specialSkill: "Catches Freesbies on the beach",
-      type: "cat"
+      specialSkill: "just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
+      type: "Cat"
     
     },
     {
-       imageUrl:"https://content.fortune.com/wp-content/uploads/2019/01/boo.jpg",
+       imageUrl:"https://petlandbradenton.com/wp-content/uploads/2018/11/1238416_800.jpg",
        name:"Pupstar",
        color: "Red",
-       specialSkill: "this is a skill",
-       type: "dog"
+       specialSkill: "Just picks the tomatoes of of a sandwich instead of requesting a whole new sandwich.",
+       type: "Dog"
     },
     {
-        imageUrl: "https://content.fortune.com/wp-content/uploads/2019/01/boo.jpg",
+        imageUrl: "https://www.askideas.com/media/16/Cute-Pug-Puppy-Image.jpg",
         name: "Coco",
         color: "Green",
-        specialSkill: "Gives sincere apologies.",
-        type: "dog"
+        specialSkill: "Just picks tomatoes off of a sandwich instead of requesting a new sandwich.",
+        type: "Dog"
         
       },
       {
@@ -43,14 +43,14 @@ const pets = [
         name: "Fluffy",
         color: "Poop-Colored",
         specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
-        type: "dog"
+        type: "Dog"
        },
        {
-         imageUrl: "http://kittentoob.com/wp-content/uploads/2015/06/funny-cat-with-a-towel.jpg",
+         imageUrl: "https://images-na.ssl-images-amazon.com/images/I/71IY2o-6jlL._AC_SX425_.jpg",
          name: "Dusty",
          color: "Green",
-         specialSkill: "Gives sincere apologies.",
-         type: "dino"
+         specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich",
+         type: "Dino"
             
         },
         {
@@ -58,28 +58,27 @@ const pets = [
          name: "Trouble",
          color: "Poop-Colored",
          specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
-         type: "dino"
+         type: "Dino"
         },
         {
-         imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg", 
+         imageUrl: "https://www.papo-france.com/674/stegosaurus.jpg", 
          name: "Trouble",
          color: "Poop-Colored",
          specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
-         type: "dino"
+         type: "Dino"
         
         }
     ];
-
 
     const buildpetsCards = ()=> {
     let domString= '';
     for(let i = 0; i < pets.length; i++){
         domString += `<div class="petscards">`;
-        domString += `<img class="img" src="${pets[i].imageUrl}">`
-        domString += `<h3>${pets[i].name}</h3>`;
+        domString += `<h2 class="petname">${pets[i].name}</h2>`
+        domString += `<img class="img" src="${pets[i].imageUrl}">`;
         domString += `<p>Color: ${pets[i].color}</p>`;
         domString += `<p>SpecialSkill: ${pets[i].specialSkill}</p>`;
-        domString += `<h3>${pets[i].type}</h3>`;
+        domString += `<h3 class="pettype">${pets[i].type}</h3>`;
         domString += '</div>';
       }
       const printToDom = (divId, textToPrint) => {

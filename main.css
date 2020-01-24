@@ -1,19 +1,53 @@
 body{
     background-color: bisque;
-}
-
+}   
+ 
 #pets {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    width: 1000px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.petscards{
-border: 2px solid blue;
-width: 25%;
+.petscards {
+    background-color: white;
+    padding: 0px 0px;
+    margin-left: 150px;
+    margin-top: 75px;
+    margin-bottom: auto;
+    border: 1px solid lightblue;
+    height: 400px;
+    width: 250px;
 }
+
 img{
-    width: 200px;
+    display:block;
     height: 200px;
+    width: 200px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.petname{
+    display: block;
+    font-weight: bold;
+    border: 1px solid lightblue;
+    border-radius: 0;
+    width:100%;
+    margin-top: 0;
+    margin-left: auto;
+    text-align: center;   
+}
+
+.pettype {
+    display: block;
+    font-weight: bold;
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    border-radius: 0;
+    width:100%;
+    margin-top: 0;
+    margin-left: auto;
+    text-align: center;  
+    }
