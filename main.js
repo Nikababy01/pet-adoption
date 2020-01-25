@@ -49,7 +49,7 @@ const pets = [
          imageUrl: "https://images-na.ssl-images-amazon.com/images/I/71IY2o-6jlL._AC_SX425_.jpg",
          name: "Deeno",
          color: "Brown",
-         specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich",
+         specialSkill: "Sweet with so much love to give for the humans who take care of him. Gives the best kisses",
          type: "Dino"
             
         },
@@ -57,14 +57,14 @@ const pets = [
          imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg",  
          name: "Barney",
          color: "Brown",
-         specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
+         specialSkill: "Seems a little scary at first, but loves to snuggle up in the sunshine. He is a great protector and nobody will mess with you with him around!",
          type: "Dino"
         },
         {
          imageUrl: "https://www.papo-france.com/674/stegosaurus.jpg", 
          name: "Trouble",
          color: "Green",
-         specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
+         specialSkill: "Such a gentle giant. He loves the nice humans who come to see him here at the 100 Oaks PetSmart. He loves to be stroked on the head gently.",
          type: "Dino"
         
         }
@@ -74,7 +74,7 @@ const pets = [
     let domString= '';
     for(let i = 0; i < pets.length; i++){
         domString += `<div class="petscards">`;
-        domString += `<h2 class="petname">${pets[i].name}</h2>`
+        domString += `<h2 class="petname ${pets[i].type}">${pets[i].name}</h2>`
         domString += `<img class="img" src="${pets[i].imageUrl}">`;
         domString += `<p>Color: ${pets[i].color}</p>`;
         domString += `<p>SpecialSkill: ${pets[i].specialSkill}</p>`;
