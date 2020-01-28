@@ -69,28 +69,55 @@ const pets = [
         
         }
     ];
+    const printToDom = (divId, textToPrint) => {
+      const selectedDiv = document.getElementById(divId);
+      selectedDiv.innerHTML = textToPrint;
+      };
 
-    const buildpetsCards = ()=> {
-    let domString= '';
-    for(let i = 0; i < pets.length; i++){
+    const buildpetsCards = (monkeyButt)=> {
+    let domString= ''; 
+    console.log("im in here ${monkeyButt.length}") 
+    for(let i = 0; i < monkeyButt.length; i++){
         domString += `<div class="petscards">`;
-        domString += `<h2 class="petname ${pets[i].type}">${pets[i].name}</h2>`
-        domString += `<img class="img" src="${pets[i].imageUrl}">`;
-        domString += `<p>Color: ${pets[i].color}</p>`;
-        domString += `<p>SpecialSkill: ${pets[i].specialSkill}</p>`;
-        domString += `<h3 class="pettype ${pets[i].type}">${pets[i].type}</h3>`;
+        domString += `<h2 class="petname ${monkeyButt[i].type}">${pets[i].name}</h2>`;
+        domString += `<img class="img" src="${monkeyButt[i].imageUrl}">`;
+        domString += `<p>Color: ${monkeyButt[i].color}</p>`;
+        domString += `<p>${monkeyButt[i].specialSkill}</p>`;
+        domString += `<h3 class="pettype ${monkeyButt[i].type}">${monkeyButt[i].type}</h3>`;
         domString += '</div>';
       }
-      const printToDom = (divId, textToPrint) => {
-        const selectedDiv = document.getElementById(divId);
-        selectedDiv.innerHTML = textToPrint;
-        }
+      
         printToDom('pets',domString);
-    };
-
- 
-    buildpetsCards();
-    
-    
         
-        console.log(pets);
+    };
+           
+         const myPetBtn=(e) => {
+          const buttonId = e.target.id;
+          console.log(buttonId);
+          
+          if(buttonId === 'All' ) {
+          buildpetsCards(pets);
+          } else {
+          const myPets = [];
+          for(let i = 0; i < pets.length; i++){
+          if(pets[i].type  === buttonId) {
+              myPets.push(pets[i]);
+            }
+          }
+          buildpetsCards(myPets);
+         }
+        };
+          
+          const eventsForPets = () => {
+            document.getElementById('All').addEventListener('click', myPetBtn);
+            document.getElementById('Cat').addEventListener('click', myPetBtn);
+            document.getElementById('Dog').addEventListener('click', myPetBtn);
+            document.getElementById('Dino').addEventListener('click', myPetBtn);
+          }
+
+              const init = () => {
+              buildpetsCards(pets);
+              eventsForPets();
+          }
+          init();
+       

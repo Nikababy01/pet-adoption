@@ -22,6 +22,7 @@ body{
     position: relative;
     font-size: 14px;
     font-family: Arial;
+    font-weight: bold;
     box-shadow: 5px black;
     
 }
@@ -31,7 +32,7 @@ body{
     font-family: sans-serif;
    justify-content: center;
 }
-.btn{
+#btn{
     height: 200px;
     margin: 0px auto;
     padding-top: 10px;
@@ -41,7 +42,12 @@ body{
     text-align:center;
 
 }
-
+.Allbtn{
+    background-color: black;
+    height: 50px;
+    width: 150px;
+    color: white;
+    }
 .Catbtn{
     background-color: fuchsia;
     height: 50px;
