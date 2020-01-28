@@ -12,15 +12,15 @@ body{
 
 .petscards {
     background-color: white;
-    padding: 0px 0px;
     margin: 1%;
     border: 2px solid black;
     width:30%;
+    height: auto;
     position: relative;
     font-size: 14px;
     font-family: Arial;
     font-weight: bold;
-    box-shadow: 5px black;
+    box-shadow: 5px 5px black;
     
 }
 .adopt{
@@ -87,14 +87,15 @@ img{
 }
 
 .pettype {
-    display: block;
+    display: box;
     font-weight: bold;
     width:100%;
     margin-bottom: 0;
     margin-left: auto;
     text-align: center;
-    position: absolute;
     bottom: 0;
+    position: relative;
+  
  }
 
 .Cat{
@@ -108,3 +109,7 @@ background-color:yellow;
 .Dino{
 background-color: coral;
 }
+.skill{
+    margin: 10px;
+}
+    
