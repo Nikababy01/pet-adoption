@@ -13,6 +13,7 @@ body{
 .petscards {
     background-color: white;
     margin: 1%;
+    margin-bottom: auto;
     border: 2px solid black;
     width:30%;
     height: auto;
